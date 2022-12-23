@@ -50,9 +50,7 @@ class carComparator implements Comparator {
         int temp3 = ((Car)objectFirst).getModel().compareTo(((Car)objectSecond).getModel());
 
         if (temp1 == 0) {
-
             if (temp2 == 0) {
-
                 if (temp3 == 0) { return ((Car)objectFirst).getColor().compareTo(((Car)objectSecond).getColor()); }
                 return temp3;
             }
