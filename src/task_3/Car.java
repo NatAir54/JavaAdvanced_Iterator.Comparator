@@ -43,15 +43,15 @@ public class Car{
 
 }
 
-class carComparator implements Comparator {
-    public int compare(Object objectFirst, Object objectSecond) {
-        int temp1 = ((Car)objectFirst).getSpeed() - ((Car)objectSecond).getSpeed();
-        int temp2 = ((Car)objectFirst).getPrice() - ((Car)objectSecond).getPrice();
-        int temp3 = ((Car)objectFirst).getModel().compareTo(((Car)objectSecond).getModel());
+class carComparator implements Comparator <Car>{
+    public int compare(Car carFirst, Car carSecond) {
+        int temp1 = (carFirst.getSpeed() - carSecond.getSpeed());
+        int temp2 = (carFirst.getPrice() - carSecond.getPrice());
+        int temp3 = (carFirst.getModel().compareTo(carSecond.getModel()));
 
         if (temp1 == 0) {
             if (temp2 == 0) {
-                if (temp3 == 0) { return ((Car)objectFirst).getColor().compareTo(((Car)objectSecond).getColor()); }
+                if (temp3 == 0) { return (carFirst.getColor().compareTo(carSecond.getColor())); }
                 return temp3;
             }
             return temp2;
